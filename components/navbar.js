@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./navbar.module.css"
 import { Bebas_Neue } from 'next/font/google'
 import { Montserrat } from 'next/font/google'
+import Link from "next/link";
 
 
 const Bebas_Neue_Font = Bebas_Neue({ subsets: ['latin'], weight: ['400'] })
@@ -39,16 +40,16 @@ const Navbar = () => {
                             </div>
                             <ul class={`navbar-nav mt-2 h4 text-uppercase ${styles.letter_spacing_lg}`}>
                                 <li class="nav-item m-0 mx-md-4  ">
-                                    <a className={`nav-link  ${styles.main_color}`} aria-current="page" href="#">Home</a>
+                                    <Link className={`nav-link  ${styles.main_color}`} aria-current="page" href="/">Home</Link>
                                 </li>
                                 <li class="nav-item m-0 mx-md-4 ">
-                                    <a className={`nav-link  ${styles.main_color}`} aria-current="page" href="#">Menu</a>
+                                    <Link className={`nav-link  ${styles.main_color}`} aria-current="page" href="/menu">Menu</Link>
                                 </li>
                                 <li class="nav-item m-0 mx-md-4 ">
-                                    <a className={`nav-link  ${styles.main_color}`} aria-current="page" href="#">our story</a>
+                                    <Link className={`nav-link  ${styles.main_color}`} aria-current="page" href="our_story">our story</Link>
                                 </li>
                                 <li class="nav-item m-0 ms-md-4 ">
-                                    <a className={`nav-link  ${styles.main_color}`} aria-current="page" href="#">Contact us</a>
+                                    <Link className={`nav-link  ${styles.main_color}`} aria-current="page" href="contact_us">Contact us</Link>
                                 </li>
                             </ul>
 
@@ -58,7 +59,7 @@ const Navbar = () => {
                 </div>
             </nav>
         </div>
-        
+
 
     </>)
 }
